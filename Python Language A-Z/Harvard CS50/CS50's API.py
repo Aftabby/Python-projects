@@ -2,7 +2,7 @@
 
 import requests #To make HTTP request to 3rd party APIs (iTunes - apple)
 import sys
-import json #THis module helps to manupulate json data and format it in different way
+import json #THis module helps to manupulate json data type and format it in different way
 
 if len(sys.argv) != 2:
     sys.exit("You should provide the name of the artist or band")   #To terminate the programme

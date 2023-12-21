@@ -10,7 +10,7 @@ def goodbye(name):
     print(f"goodbye {name}")
 
 
-if __name__ == "__main__": #This is a very special variable of python, it gets equal to "__main__", when you run the program from command line, not by calling as a library to another file
+if __name__ == "__main__": #This (name) is a very special variable of python, it gets equal to "__main__", when you run the program from command line, not by calling as a library to another file
     main()                  # And thus the code will not get trigerred while using it as a library to another file
 
 
