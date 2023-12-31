@@ -1,5 +1,3 @@
-'''     Till 12:28:00     '''
-
 class Student:
     def __init__(self, name, house): #instance method, the __init__ initializes or only called when the object is creating
         if not name:
@@ -30,6 +28,8 @@ class Student:
         if new_house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
         self._house = new_house
+    #when someone commands -- object_name.variable_name( here variable name is house) -- the Getter or @property house method will get called
+    #when someone commands -- object_name.variable_name(here it is house) = some_value -- then Setter or @house.setter method will get called with an argument of -- some_value --
 
      
     @property
