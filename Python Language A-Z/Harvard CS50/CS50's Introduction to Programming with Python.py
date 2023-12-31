@@ -51,18 +51,4 @@ print(f"hello, {first}")
 print("\n\n\n")
 
 
-
-
-# Standard way to write code - organized code:
-def main():
-    #Write your main code here
-    print("Main function")
-
-def all_the_custom_functions():
-    print("custom function")
-
-main()  #now call the main function
-
-
-
-#Concept about scope
+# Standard way to put the codes
