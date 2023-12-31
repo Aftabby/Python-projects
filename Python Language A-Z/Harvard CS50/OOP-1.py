@@ -1,4 +1,4 @@
-'''     Till 11:28:00     '''
+'''     Till 12:28:00     '''
 
 class Student:
     def __init__(self, name, house): #instance method, the __init__ initializes or only called when the object is creating
@@ -8,12 +8,12 @@ class Student:
             raise ValueError("Invalid house")
 
         self.name = name    #Here -- self -- is the object that just created
-        self.house = house
+        self.house = house  #But here the property(or variable) is not the name or the house, rather it calls the name and house method, which is below, (getter/property & setter)
     
     def __str__(self):  #A special kind of string that makes the object (while creating from the class) like an string while accessed from outside, like -- print(object_name) -- 
         #return "a student" #Comment it off, just to get the idea
         return f"{self.name} from {self.house}"
-    
+
 
     #Getter
     @property   #Is telling the python to work the below method as a getter, that is, when the variable will be called from outside(which must be the same name as the method), it will run the method and return the value from the method, that prevents direct accessing of the variable
@@ -43,20 +43,33 @@ class Student:
         self._name = new_name
 
 
-
+    @classmethod    #This is a class method, we can call the class method without creating an object - TO know more detail about the class read the -- OOP-2.py -- in the same directory
+    def get(cls):
+        name = input("Enter name: ")
+        house = input("Enter house: ")  
+        return cls(name,house)      #Here cls is the class itself, so it is returning an object from the very class Student itself,,, it means cls(name, house) is equals to Student(name, house)
+                                    # -- self -- it the object itself and -- cls -- is the class itself
+        
+    
     
 
 
 
  
 def main():
-    student = get_student()
+    #student = get_student()    #Using the function we are getting the details of the student. More conventional way to do is, all the methods, variable needed just for student should be inside a class - SO we will use a -- class method -- here
+    
+    #Usine a -- class method -- details is in OOP-2.py - file
+    student = Student.get()     #That's how you call class method (it is not an object method(instance method))
+
     #print(f"{student.name} is from {student.house}")
 
-    #WE can change the attribute by accessing the object variable from here\
+    #WE can change the attribute by accessing the object variable from here, but it actually triggering a method -- house -- from @house.setter -- the actual object variable is --  _house  ---
     student.house = "Slytherin"
 
     print(student)  #When we try to access the whole object, it runs a special method from the object called __str__  ;; See the class definition above for more info
+
+
 
 
 def get_student():
@@ -65,6 +78,8 @@ def get_student():
 
     student = Student(name, house)      #Constructor call to create an object called -- student -- from Student class --
     return student
+
+
 
 if __name__ == "__main__":
     main()
