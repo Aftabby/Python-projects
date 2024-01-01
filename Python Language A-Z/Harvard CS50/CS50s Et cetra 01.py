@@ -292,7 +292,205 @@ def f(*args, **kwargs):     #It is the conventional way to define the positional
 
 
 
+# ============================================== map function =======================
+    # map(function_name, an_iterable_variable)
+    # map function takes two variable one is function (without the open and closed parenthesis, because we are just passing it not calling it), then another any data structure that is iterable type variable
+    # then the map function takes each element from the list (let's say list is that iterable variable for now) and applies that parameter function for each of the element
+    # and then it returns a list of all the elements that has been returned from passing the initial parameter list to the function -- example shown below
 
 
+hello = ["Hello", "How", "Are", "You"]
+
+hello_uppercase = map(str.upper, hello)  #here we will convert all the words into uppercase, and the method upper is in the -- str -- class, so str.upper ,, and we didn't put parenthesis after the str.upper because we are not calling the method, rather we are passing the function as a parameter to the map function
+                                        # The map function will return a list of all the words as elements but everything in uppercase
+                                        # We operate like this when we want to perform same function for every element of the list and save the return value also a list
+print(*hello_uppercase)     #We are not printing a sentence here, that's why unpacked the list with an asterisk(*)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================  List Comprehension  =================================
+
+hello = ["Hello", "How", "Are", "You"]
+
+hello_uppercase = [word.upper() for word in hello]     #It will basically run the function -- word.upper() -- where word is the variable whose value iterates over the elements of the list
+                                                        # Then as the return value will be saved inside a list, each return value as an element of the new list
+                                                        # We operate like this when we want to perform same function for every element of the list and save the return value also a list
+                                                        # Lastly all the new elements will be stored in a new list, as the comprehension is inside square bracket, which represents list
+
+
+# List Comprehension With Conditional
+students = [
+    {"Name" : "Abdul", "Age" : 28},
+    {"Name" : "Hasib", "Age" : 17},
+    {"Name" : "Farin", "Age" : 22},
+    {"Name" : "Zahid", "Age" : 15},
+    {"Name" : "Nabib", "Age" : 19}
+]
+
+adult = [ student["Name"] for student in students if student["Age"] >= 18 ]  #There are three parts to focus on,, first -- for student in students --- just iterating over each of the dictionary_item, which are the elements of the list
+                                                                            #Second, -- if student["Age"] >= 18  -- it is checking just like not condiotionals, if True going to the third step, other wise it is moving back to the first step
+                                                                            # Third, -- student["Name"] -- This value is storing as an element of the new list
+print(*adult)
+print(adult)
+
+
+
+
+
+
+
+
+
+
+
+# ==========================================  filter function ===================================
+
+# The difference between map function and filter function is filter function takes only boolean value from it's parameter function
+# And when it comes as True, it appends that value to the new_list as an element, if it is False, then it skips that element, and iterate over the next one
+# Also, it also doesn't return the new values as a list data type like map_funcion, rather it return in filter object, which is iterable
+# Thus how the filtering works
+
+students = [
+    {"Name" : "Abdul", "Age" : 28},
+    {"Name" : "Hasib", "Age" : 17},
+    {"Name" : "Farin", "Age" : 22},
+    {"Name" : "Zahid", "Age" : 15},
+    {"Name" : "Nabib", "Age" : 19}
+]
+
+def is_adult(student):
+    return student["Age"] >= 18
+
+adult_students = filter(is_adult, students) 
+
+#sorting the elements which are dictionary type, based on it's key
+adult_students = sorted(adult_students, key= lambda s: s["Name"])   # Google how to sort a dictionary via sorted function, also you have issue with lambda function, google it as well,,, Or you can skip this line, it is just sorted the elements
+
+print(*adult_students)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ================================================  Dictionary Comprehension ==============================
+
+students = ["Abdul", "Farin", "Nabib"]
+
+
+adult_students = { student : "Is Adult" for student in students}    #It works just like the list comprehension,
+                                                                    # Here first part, -- for student in students -- just like normal loop, and for every iteration it will go to the next step
+                                                                    # Second part, a dictionary element will be created , from the part -- student : "Is adult"
+                                                                    # Lastly, a new dictionary will be created with all the new -- key:value -- pairs as element, as this comprehension is inside curly braces, which represents a dictionary
+
+print(adult_students)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================  Enumerate function  ======================================
+
+# Enumerate takes in an iterable_item (list, tuple etc) and returns two value, first one is the index number and the second one is the value of that index positioned element.
+# It returns an enumerate object, where each of the element has two value, (index_number , value_of_that_index_positon), and each element is in tuple data type
+
+
+alphabets = [ "a", "b", "c", "d", "e"]
+
+print(*enumerate(alphabets))
+
+for serial, alphabet in enumerate(alphabets):
+    print(serial+1, alphabet)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ========================================   Generators    ===================================
+    
+# The keyword used for generator is -- yield  ---
+# As sometimes we need to return a massive amount of data from a function, which puts too much pressure on memory
+# And we can't return the massive value partially as if we return a value we are already out of the function
+
+# That's why we use the keyword -- yield -- as it returns the value from a function to the main function, part by part (not taking too much memory at a time), 
+                    #at the same time unlike return it doesn't quit the function immediately once called
+    
+
+
+# THe best practice is to use every thing in different function, and keep the main function clean, just getting the value in main function, it is the conventional way. Also, it helps in unit test debugging
+    
+
+def main() -> None:
+    n = int(input("What is n? "))
+    for s in sheep(n):
+        print(s)
+
+def sheep(n):
+    for i in range(n):
+        yield " 🐑 " * i       # if we have created an empty list and appended all the value and then returned it into the main function, that would work if n= smaller value, if n is 1 million the programmer will crush
+                                # That's why we use yield to return partial value at a time.
+        
+
+
+if __name__ == "__main__":
+    main()
 
 
