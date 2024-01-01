@@ -10,7 +10,7 @@ class Wizard:
 
 class Student(Wizard):  #Here Student is the subclass of Wizard class, which means Student inherits everything from the Wizard class
                                 #That means we can use every characteristics of the wizard class
-                                    #Wizard is the parent of this(Student) class -- or -- Super class of this class -- And this Student class is the subclass of the parent class Wizard
+                                    #Wizard is the parent of this(Student) class -- or -- Super class of this class -- And this Student class is the subclass/child class of the parent class Wizard39
     def __init__(self, name, house):
         super().__init__(name)  # -- super() -- is programmatic approach of calling the super(or parent class) class of this current class, then we called the special method of that class which is -- __init__ -- passing a argument to it -- the variable -- name --
         self.house = house
