@@ -1,4 +1,4 @@
-x = int(input("What's X? "))
+#x = int(input("What's X? "))
 
 # If the user inputs a string that is not a number, then it would be a value error
 # Let's see how we can avoid that
