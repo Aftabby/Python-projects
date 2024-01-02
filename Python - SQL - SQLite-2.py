@@ -36,6 +36,12 @@ else:
     user_password = input("You are not an user. To be a new user, please enter your new password.")
 
 
+
+
+
+
+
+
     #Creating a New USER           #======================  DYNAMIC QUERY  =====================================
     next_id = id[0] + 1
     print(next_id, type(next_id))
@@ -52,4 +58,100 @@ else:
     cursor.execute("SELECT * FROM Users WHERE Id = :id", {"id" : next_id})
     user = cursor.fetchone()      #cursor.fetchone() returns tuples
     print("Contratulation you are an user now, here is your details: ",*user)        #unpacked tuple with an asterisk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==========================================   DISTINCT KEYWORD ===================================
+    
+# If you want to read only one value , no duplicate data from a column then use Distinct kw
+    
+cursor.execute("SELECT DISTINCT City FROM Friends")         #Suppose you have a table named -- Friends -- and all friends has a city column
+                                                            # Two or more friends could be from the same city
+                                                            # But you wanna only know from how many cities you got friends
+                                                            #Then with distinct kw , it will give you each name of the city only one time.
+                                                            # You only wanna know all the cities, not wanna watch a city again and again
+
+
+
+
+
+
+
+
+
+
+
+
+# =====================================   LIMIT KEYWORD =============================================
+
+# Let's say you got a table with few millions of rows but you wanna read only the first 5 or 10 lines
+
+cursor.execute("SELECT * FROM Customers LIMIT 10")      # It will only read first 10 lines of the -- Customer -- table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=============================================   Advanced Filters  ====================================
+
+# When you want to select some particular rows from a table, lets say with id = 5, id = 8 and id = 10
+
+#Below 2 lines are the same
+cursor.execute("SELECT * FROM Users WHERE Id = 5 OR Id = 8 OR Id = 10")     #Though It has used -- OR -- but it will read all the rows
+cursor.execute("SELECT * FROM Users WHERE Id IN (5, 8, 10)")    # With the -- IN -- keyword inside the parenthesis you can pass all the values, if any of the value is matched, that row will be selected
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================  Goldfish Memory : Databases Pattern Match ================================
+
+#Let's say you don't remember full email of the user you are lookin for, you can just partially remember it like it ends with -- @yahoo.com ---- 
+# If you use -- WHERE -- Keyword it will look for complete match, and hence will not find any data or row
+# In that case to find all the user, whose email ends with -- @yahoo.com -- you have to do two things, instead of equal sign use the kw -- LIKE -- and use percentage sign -- % -- on the side of the string you don't know. see example below
+
+cursor.execute("SELECT * FROM Users WHERE Email LIKE '%@yahoo.com' ")
+cursor.execute("SELECT * FROM Users WHERE Email LIKE 'mail@aft%'  ")    # When you have forgot the last part of the email
 

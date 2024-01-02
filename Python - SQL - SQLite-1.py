@@ -1,7 +1,7 @@
 import sqlite3  #importing library that will help to use database sqlite by python
 
 # SQL is case insensitive, but here we will follow SQL Queries will all uppercase
-# SQLite doesn't guarantee order of the row as you have added it
+
 
 #Creating table and INserting data
 conn = sqlite3.connect("just_a_database_name.db")    #connecting to the database name
@@ -67,6 +67,14 @@ for each_user in users:     #If you wanna see by the row, that mean each user
 print("\nUsing fetchone")
 print(user)
 print(user[3], user[1], user[2])    #While using fetchone method to retrieve data, the index comes as the order of the columns in the select statement, if you use -- * -- to select all the column, then the order will be the order defined while declaring the table (creating the table) - You can access any column
+
+
+#Data Retrieve by ORDER
+# SQLite doesn't guarantee order of the row as you have added it - but there are keywords to do that
+cursor.execute("SELECT * FROM Users ORDER BY Id")   # To get the data row just as the order as you have added it, you can use the keyword -- ORDER BY -- just like the example
+cursor.execute("SELECT * FROM Users ORDER BY Id ASC")   # Here ASC means ascending order, that means you'll get the data by the value of - Id - from smallest value to largest value order
+cursor.execute("SELECT * FROM USers ORDER BY Friends DESC") # Same As before, just in descinding order by the value of column - Friends
+
 
 #Committing and closing the database
 conn.commit()
