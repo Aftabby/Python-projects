@@ -129,3 +129,4 @@ cursor.execute("DELETE FROM Users") #Deleting all the data so that we don't writ
 
 conn.commit()
 conn.close()
+
