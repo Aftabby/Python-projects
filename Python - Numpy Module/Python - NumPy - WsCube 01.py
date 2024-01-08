@@ -41,3 +41,10 @@ array2 = np.array([1, 2, 3, 4], ndmin = 10) # ndmin is an optional named paramet
 
 print("10 dimensional Array:\n", array2)       # printing a 10 dimensional array, in which we passed only one element
 print("Dimension of the above array:", array2.ndim)  
+
+
+
+
+#Important NOtes:
+# SOme function takes the shape of the array as parameter, be careful different function takes it different way, 
+    #some as a tuple -- (2, 3) -- some as list -- [2, 3] -- some as another parameter --  2, 3  --
