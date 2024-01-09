@@ -6,22 +6,22 @@ import numpy as np
 #To find array data type
 list1 = [1, 2, 3, 4]
 arr1 = np.array(list1)
-print("The array 1:\n", arr1, "\nThe Data typy:", arr1.dtype)         #d.type is a variable in the numpy module - in brief a variable of the array class from numpy module, that's why we didn't use () in the end
+print("The array 1:\n", arr1, "\nThe Data type:", arr1.dtype)         #d.type is a variable in the numpy module - in brief a variable of the array class from numpy module, that's why we didn't use () in the end
 
 
 list2 = [1.0, 1.2, 1.3, 1.4]
 arr2 = np.array(list2)
-print("The array 2:\n", arr2, "\nThe Data typy:", arr2.dtype)       #d.type is for data type
+print("The array 2:\n", arr2, "\nThe Data type:", arr2.dtype)       #d.type is for data type
 
 
 list3 = ["h", "e", "l", "l", "o"]
 arr3 = np.array(list3)
-print("The array3:\n", arr3, "\nThe Data typy:", arr3.dtype)
+print("The array3:\n", arr3, "\nThe Data type:", arr3.dtype)
 
 
 list4 = ["h", "e", 1, 1, 0]
 arr4 = np.array(list4)
-print("The array4:\n", arr4, "\nThe Data typy:", arr4.dtype)
+print("The array4:\n", arr4, "\nThe Data type:", arr4.dtype)
 
 
 
