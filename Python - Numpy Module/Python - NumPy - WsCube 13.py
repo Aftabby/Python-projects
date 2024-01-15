@@ -18,15 +18,9 @@ print(arr1)
 
 
 
-
-
-
-
-
-
 # === Unique Array  ===
         #It returns the value only once in the array, if there's any repeatitive value it will put that value once, and return an array out of it
-
+                                        # It always returns 1-D array filled with all the sorted elements of the list, with no repition of any element.
 list2 = [50, 60, 70, 50, 90, 60, 30]
 arr2 = np.array(list2)
 

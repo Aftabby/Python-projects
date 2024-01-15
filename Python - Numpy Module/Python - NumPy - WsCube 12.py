@@ -7,8 +7,8 @@ import numpy as np
 list1 = [14, 16, 19, 23, 14, 16]
 arr1 = np.array(list1)
 
-index1 = np.where(arr1 == 16)    #this -- np.where( array_name == searching_element ) -- function will return all the index position where the searching_element is present in that particular array
-print(index1)
+index1 = np.where(arr1 == 16)    #this -- np.where( array_name == searching_element ) -- function will return all the index positions where the searching_element is present in that particular array
+print(index1)                           # But while searching the element in multidimensional array, the index value is returned in each of the tuple, in a column format
 
    # You can also perform mathematical operation in parameter of -- np.where() -- function, example shown below:
 index2 = np.where(arr1%2 == 0)  #Finding all the index number of the postive elements present in that particular array
