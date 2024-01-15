@@ -34,13 +34,23 @@ for rows in arr3:                   #If you understand 2-D array you will also u
 
 
 # =============================  Iteration using function (np.nditer()) ================
-print("Printing using function:")
+print("Iterating using function:")
     
-#1-D array
-for i in np.nditer(arr1):       #You can also pass multiple parameter np.nditer() method to manipulate the iteration
-    print(i)
+#For all the dimension of arrays
+for i in np.nditer(arr1):       #You can also pass multiple parameter np.nditer() method to manipulate the iteration,
+    print(i)                        #The benefit is you don't have to use for loop for each of the dimension like before, no matter the dimension value and the shape, size of array, the loop_variable (here, i) will be each of the element in the array 
 
 
-    #Iterating with index value  -- np.ndenumerate() --
+#Iterating with index value  -- np.ndenumerate() --
 for indexx, value in np.ndenumerate(arr1):  #This function will return two value, one is index and another one is the element value
     print(indexx, value)
+
+    #2-D & 3-D Array
+arr4 = np.array([[1, 2, 3],[4, 5, 6]])
+arr5 = np.array([[[1, 2], [5, 6]], [[3, 4], [7, 8]]])
+
+for index, value in np.ndenumerate(arr4):
+    print(f"Index: {index}  Value: {value}")
+
+for index, value in np.ndenumerate(arr5):
+    print(f"Indexxx: {index}  Value: {value}")
