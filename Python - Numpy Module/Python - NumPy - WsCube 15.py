@@ -22,7 +22,7 @@ print("\nMatrix:\n", matrix1, "\nData type: ", type(matrix1))       #Though both
  
 
         # Multiplication on matrix: (dot multiplication)
-#                [[a11 a12]          [[b11  b12]            [[(a11*b11)+(a12*b21)     (a11*b22)+(a12*b22)]
+#                [[a11 a12]          [[b11  b12]            [[(a11*b11)+(a12*b21)     (a11*b12)+(a12*b22)]
 #                 [a21 a22]]    X     [b21  b22]    =        [(a21*b11)+(a22*b21)     (a21*b12)+(a22*b22)]]
 
 
@@ -31,7 +31,7 @@ print("\nMatrix:\n", matrix1, "\nData type: ", type(matrix1))       #Though both
 
 #We can also multuply two matrix using -- matrix_name.dot() -- function,, 
                     #to multiply two matrix the both matrix must be under same broadcast i.e one's row number should match other's column number and vice versa
-
+                        # The new result matrix's shape will be, (row of the first operand, column of the second operand)
 list2 = [[7, 8], [9, 10], [11, 12]]
 matrix2 = np.matrix(list2)
 
