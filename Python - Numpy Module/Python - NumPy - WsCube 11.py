@@ -41,7 +41,7 @@ arr7 = np.array(list5)
 arr8 = np.array(list6)
 
 arr9 = np.concatenate((arr7, arr8), axis=1) # As in concataning in multiple dimension array, by default the concatetion happens column wise (axis = 0), but if you want to change that you can pass an extra parameter (axis) with value = 0,1,2.. 
-                                            # Here we are adding it row wise, axis parameter is described aboveS
+                                            # Here we are adding it row wise, axis parameter is described above
 print(arr9)
 
 
@@ -70,19 +70,15 @@ print("Split array started:\n")
 list7 = [30, 31, 32, 33]
 arr14 = np.array(list7)
 
-ar15 = np.array_split(arr14, 3)                                         #spliting the function, the parameter is (array, no. of parts), no. of parts is into how many parts you want to split the array
+ar15 = np.array_split(arr14, 3)      #spliting the function, the parameter is (array, no. of parts), no. of parts is into how many parts you want to split the array, it returns all the splitted array inside a list.
 print(ar15)
 print(type(ar15))
-print(ar15[0])
+print(ar15[0])                         # you can access each of the splitted array through indexing of list
 
 # 2-D Array
 ar16 = np.array(list5)
 ar17 = np.array_split(ar16, 2)
 print(ar17)
-ar18 = np.array_split(ar16, 2, axis=1)          #Splitting along axis (0, 1, 2..) i.e (x, y,..)
+ar18 = np.array_split(ar16, 2, axis=1)          #Splitting along axis (0, 1, 2..) i.e (x, y,..) i.e (row, column, dimension)
 print(ar18)
-
-
-
-
 

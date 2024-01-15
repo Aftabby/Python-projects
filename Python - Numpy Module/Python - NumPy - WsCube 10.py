@@ -19,7 +19,7 @@ print("View of Array1\n", arr1_view)
 # Difference between copy and view:
     # Copy owns the data where view does not own the data
     # The copy of the array is a new array, view is the view of the original array
-    # The changes made in the copy data does not reflect in the original array, any changes made to the view will affact the original array, vice versa, changes in original array will affect view
+    # The changes made in the -- copy -- data does not reflect in the original array, any changes made to the -- view --  will affect the original array, vice versa, changes in original array will affect -- view --
 
 
 #Checking the change in value:
