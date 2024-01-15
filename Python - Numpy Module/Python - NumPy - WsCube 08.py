@@ -6,7 +6,7 @@ import numpy as np
 list1 = [2, 3, 4, 5]
 arr1 = np.array(list1)
 
-print(arr1[1], arr1[3], arr1[-2])     #Indexing just like we used to do in list list, it also take negative indexing
+print(arr1[1], arr1[3], arr1[-2])     #Indexing just like we used to do in list, it also take negative indexing
 
 
 # 2-D Array
@@ -43,7 +43,7 @@ print(arr3[0][1][1])
 list4 = [1, 2, 3, 4, 5, 6]
 arr4 = np.array(list4)
 
-print("Slicing 1-D Array:", arr4[1:4], "\n", arr4[:3])      # just like we used to do in list list, it also take negative indexing slicing
+print("Slicing 1-D Array:", arr4[1:4], "\n", arr4[:3])      # just like we used to do in list, it also take negative indexing slicing
 
 print("Printing with Step: ", arr4[::2])        # slicing -- array[start : stop : step]
 
