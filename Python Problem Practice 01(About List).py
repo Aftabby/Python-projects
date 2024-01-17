@@ -1,3 +1,12 @@
+#Multiple line string -- Extra
+any_string = '''This is a line
+This is another line
+This is third line'''   #You can write multiple line inside ''' -- triple quote
+
+print(any_string)
+
+
+
 #Sum of Digit
 digits = input("Enter the digits:\n")
 sum = 0
@@ -68,7 +77,7 @@ num2 = 15
 
 largest = max(num1, num2) #Use max to find out the large number
 print(largest)
-# -------Finding the largest among three numbers
+# ------- Finding the largest among three numbers
 num3 = 25
 largest = num1
 
@@ -298,9 +307,12 @@ else:
 #What does round function do?
 
 
+
 #Important Notes
+# To print multiple line in string use \n or use triple quote ---'''  This is a line *enter* This is another line ''' 
 # The indexing number of a string type variable also work as the index number of list
 # For more problem solving visit HeckerRank and LeetCode
 # Assigning a value by mathematical division to a variable, the variable data type automatically becomes float -- ( a = 10/5, here a is float data type)
 # To see data type of a variable ( print(type(variable_Name)))
 # It is best practice to write veriable name is Snake format i.e the_new_variable
+# String is immutable and Lists are mutable. Mutable means elements can be changed individually
