@@ -17,7 +17,7 @@ for student in students:
     houses.add(student["house"])        #In list you use -- list_name.append() -- in set you use -- set_name.add()  --
 
 for house in sorted(houses):
-    print(house)
+    print(house)                # set don't take any duplicate value, so we will get each house only once.
 
 
 
@@ -78,7 +78,7 @@ print("End of Bank\n\n")
 
 
 #there is no KW in python to declare constant variable
-# but generally the variables which should be and remain constant is declared with all Capital letter (CAT = 3)
+# but generally the variables which should remain constant is declared with all Capital letter (CAT = 3)
 # It is an honor method of python, that when a variable name in python is all capitalized, all programmers treat it as a constant
 # in the same way when a variable name starts with underscore( _ ) , that means, no one should change the value of it, " don't touch variable " other than the one who created it.
 # And when a variable name starts with  double underscore ( __ ) , that means, it is a speacial type of variable built in by python developers
@@ -97,7 +97,7 @@ class Cat:  # By convention, the first letter of a class name should be capital
 
 
 def main():
-    MEOWS = 3           #Read the comments of the constatnt variable segment for better understanding of what happened here
+    MEOWS = 3           #Read the comments of the constant variable segment for better understanding of what happened here
 
     for _ in range(MEOWS):  #We did not hardcode the constant  -- 3 -- here, rather we declared a variable (which is in all caps, means it should remain constant), and put the variable here
         print("Meow")
