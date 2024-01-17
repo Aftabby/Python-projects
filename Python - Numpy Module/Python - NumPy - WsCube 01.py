@@ -1,34 +1,34 @@
 import numpy as np  #np is standard alias of numpy
 
-#TO create a numpy array -- np.array(list_name)     -- the list_name is a list which contains one type of data as elements, like only integer or only string
+#TO create a numpy array -- np.array(list_name)     -- the list_name should contain one type of data as elements, like only integer or only string, other wise you might get error while doing different operation and perform functionalities on it
+                                                        #You can also pass in tuples
+list1 = [1, 2, 3, 4]
+arr1 = np.array(list1)
 
-my_list = [1, 2, 3, 4]
-numpy_array = np.array(my_list)
-
-print(my_list, type(my_list))
-print(numpy_array, type(numpy_array))
+print(list1, type(list1))
+print(arr1, type(arr1))
 
 
 
 # Dimensions in Arrays
 # You can create multiple dimensions of array in numpy
-# Numpy doesn't represent comma between the elements of array, like a list, it merely puts a space between the elements
-# For more than one dimensional array, the number of elements in is array/list should be same - ex: each list/row of a 2D array should contain the same number of elements
-# The number of open square bracket at the beginning represent the dimension of array
+# Numpy doesn't put comma between the elements of array, like a list, it merely puts a space between the elements
+# For more than one dimensional array, the number of elements in is array/list should be same - ex: each list/row of a 2D array should contain the same number of elements i.e. homogenous shape
+# The number of open square bracket at the beginning of the array represent the dimension of array
 
 
 # 1-D Array  ->  [1 2 3]
-# 2-D Array ->   [[1 2 3], [4 5 6]]
-# 3-D Array ->   [[[1 2 3], [4 5 6]] [7 8 9] [10 11 12]]
+# 2-D Array ->   [[1 2 3] [4 5 6]]
+# 3-D Array ->   [[[1 2 3] [4 5 6]] [[7 8 9] [10 11 12]]]
 
 
 #To check the dimension of Array
-print("Dimension of array :", numpy_array.ndim)
+print("Dimension of array :", arr1.ndim)
 
-list1 = [1, 2, 3, 4]
-list2 = [3, 4 , 5, 6]
+list2 = [1, 2, 3, 4]
+list3 = [3, 4 , 5, 6]
 
-another_array = np.array([list1, list2])
+another_array = np.array([list2, list3])
 print(another_array)
 print("Another dimension of array:", another_array.ndim)        # ndim is a variable in numpy module, that's why we do not use --  ndim() -- rather we use -- ndim  --
 
