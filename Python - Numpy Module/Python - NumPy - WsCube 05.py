@@ -3,7 +3,7 @@ import numpy as np
 #Shape and Reshape in Numpy Arrays
 
 #Shape
-#Checking the shape of a matrix
+#Checking the shape of an array
 list1 = [1, 2, 3, 4]
 list2 = [5, 6, 7, 8]
 arr1 = np.array([list1, list2])
@@ -41,7 +41,7 @@ print("Array 5:\n", arr5, "\nShape of Array5: ", arr5.shape, "\nThe dimension of
 
 
 #reshaping an 1-D array to 3-D array:
-arr6 = arr4.reshape(2, 3, 2)    # From the left of the parameters, we wanted 2 rows, 2 rows, 3 column
+arr6 = arr4.reshape(2, 3, 2)    # From the left of the parameters, we wanted 2 rows, 2 rows, 3 columns
 print("Array 6:\n", arr6, "\nShape of Array6: ", arr6.shape, "\nThe dimension of the Array:", arr6.ndim)    
 
 
@@ -49,4 +49,6 @@ print("Array 6:\n", arr6, "\nShape of Array6: ", arr6.shape, "\nThe dimension of
     #below two lines work the same
 arr7 = arr6.reshape(12)     #There is a shortcut to make 1 dimensional array from a multidimensional array, just pass the paramete as negative one (-1)
 #arr7 = arr6.reshape(-1)
+#arr7 = np.reshape(arr6, 12)        #It also does the same thing
+#arr7 = np.reshape(arr6, -1)        #It also does the same thing
 print("Array 7:\n", arr7, "\nShape of Array7: ", arr7.shape, "\nThe dimension of the Array7:", arr7.ndim)
