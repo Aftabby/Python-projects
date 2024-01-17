@@ -36,7 +36,7 @@ print(arr_randn1, "\n\n")
 arr_ranf = np.random.ranf(4)    #The parameter takes shape of the array, here it is 1X4 , when you pass a single number, you don't need to mention 1, it automatically understands you want one row
 print(arr_ranf)
 
-arr_ranf1 = np.random.ranf((5,3)) # it takes the parameter as the shape of the array, example: 5 X 3
+arr_ranf1 = np.random.ranf((5,3)) # it takes the parameter as the shape of the array, example: 5 X 3, and takes the shape as atuple
 print(arr_ranf1, "\n\n")
 
 
