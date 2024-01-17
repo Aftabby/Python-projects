@@ -2,7 +2,7 @@ import numpy as np
 
 # Broadcasting using numpy
         #To perform arithmatic operation on two array, both array should be of same dimension and same shape
-        #For different dimensions of arrays, the both shape must contain one common value, that is a.shape = (1X3), b.shape = (4X1) ,, both have one common value i.e one (1) ,, The new array shape will be (the_greater_row_from_both_of_the_array ,  the_greater_column_from_both_of_the_array) --
+        #For different dimensions of arrays, the both shape must contain one common no. of value, that is a.shape = (1X3), b.shape = (4X1) ,, both have one common no. of value i.e one (1) ,, The new array shape will be (the_greater_row_from_both_of_the_array ,  the_greater_column_from_both_of_the_array) -- this rules only applies when the common no. of value is one (1), not for any other common no. of values
 
 list1 = [1, 2, 3, 4]    #The shape of this array is 1X4, and dimension 1-D
 list2 = [5, 6, 7]       #The shape of this array is 1X3, and dimension 1-D
@@ -33,7 +33,8 @@ arr6 = np.array(list6)
 
 print(arr5 + arr6)
 
-# So what we learned from here, For different dimensions of arrays, the both shape must contain one common value, that is a.shape = (1X3), b.shape = (4X1) ,, both have one common value i.e one (1)
+# So what we learned from here, For different dimensions of arrays, the both shape must contain one common no. of value (that common no. of value must be 1), that is a.shape = (1X3), b.shape = (4X1) ,, both have one common value i.e one (1)
+                        # It could also be a.shape = (1, 6) and b.shape = (1, 3)  -- and as there is a common no. of value which is one (1) in both the shape, therefore it will not show any broadcasting error 
 
 
 
