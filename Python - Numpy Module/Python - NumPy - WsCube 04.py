@@ -45,7 +45,7 @@ print("The array7:\n", arr7, "\nThe Data typy:", arr7.dtype)
 arr8 = np.float32(arr6)        #arr6 is the integer data type, now we are converting it to float32 data type by a function
 print("The array8:\n", arr8, "\nThe Data typy:", arr8.dtype)
 
-#Conveting the data type directly as a function
+#Conveting the data type directly by a method
 arr9 = arr6.astype(float)       #If we run a method - astype() - on an array with parameter of the data type -- float (as it is float here) - then the method will return the array with changed data type
 print("The array9:\n", arr9, "\nThe Data typy:", arr9.dtype)
 
