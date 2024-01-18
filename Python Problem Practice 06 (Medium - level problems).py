@@ -1,6 +1,6 @@
 #Greatest Common Divisor
 def GCD(num1, num2):
-    if num1 >= num2:          #Or to find smaller use---- min(num1, num2)
+    if num1 >= num2:          #Or to find smaller, use---- min(num1, num2)
         smaller = num2 
     else:
         smaller = num1
@@ -12,7 +12,7 @@ def GCD(num1, num2):
 num1 = int(input("Enter first number: \n"))
 num2 = int(input("Enter second number: \n"))
 
-#print(f"The {num1} is {num2}")                   #To use variable value inside a print funtion string - print(f"The normal string {varibale_name} string continues")
+#print(f"The {num1} is {num2}")                   #To use variable value inside a print funtion string - print(f"The normal string {varibale_name} string continues") --- f{string}
 
 print("The GCD of ", num1, "and", num2, "is : ", GCD(num1, num2), "\n")
 #---------Another approach--------
