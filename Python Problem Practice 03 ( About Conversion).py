@@ -2,10 +2,8 @@
 
 def bin_to_dec(num):
     dec = []
-    indexx = 0
-    for i in num:
-        dec.append(int(i)* (2 ** (indexx)))
-        indexx += 1
+    for index, digit in enumerate(num):             #Enumerate function returns the value sequentiall along with it's index number, so it returns two value
+        dec.append(int(digit)* (2 ** (index)))
     return sum(dec)
 
 num = input("Enter the binary number: \n")
@@ -24,15 +22,15 @@ def dec_to_bin(num):
         binary.append(num % 2)
         num = (num // 2)  # num = int(num/2) --- also works --- // is floor division
     binary.reverse()  # Reverse the whole list
-    binarystr = ''
-    for bit in binary: # From list to a string
-        binarystr += str(bit)
 
-    return binarystr
+    return ''.join([str(digit) for digit in binary])    #By the -- ''.join(list_name)  -- we can convert a total list into one string, but only condition is the elements of the list should be string.
+                                                        # So we used a list comprehension, to get each element of the list, and converting each element to string, before passing it to the join() method
+                                                        # --  ''.join(list_name)  -- is a method of the class string, that's why we started the method with an empty string
 
 num = int(input("Enter a decimal number: \n"))
-num = dec_to_bin(num)
+num = int(dec_to_bin(num))      #The function will return string, we just converted to int
 print(num)
+
 #-------------Another approach ( Using recursive function) *** Important concept
 def dec_bin(num):
     if num > 1:
@@ -58,7 +56,7 @@ print(str(mile) + " mile = " + str(mile_to_km(mile)) + " Kilometer\n")
 
 
 #Queries
-#What does the round function do? 
+#What does the round function do? - Round function rounds a float value, depending upon the parameter you pass to it, it keeps that numbers of digit after decimal
 # -- Ans: It takes two parameter or argument, one is the float type data variable and another one is how many decimal points you want to display
 #what is end='' in print function, it is used to print in the same line using multiple print functions
 
