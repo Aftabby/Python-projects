@@ -3,14 +3,14 @@
 
 #Prime Factors
 def isPrime(num):
-    for i in range(2, int((num/2)+1)): # Instead of int(num/2), you can use (num//2)
+    for i in range(2, int((num/2)+1)): # Instead of int(num/2), you can use (num//2) , also you can -- import math -- math.ceil(num/2) -- instead of using -- int((num/2)+1) --
         if num % i == 0:
             return False
     return True
 
 def primeNumbers(num):
     prime_number_list = []
-    for i in range(2, num+1):
+    for i in range(2, num+1):   #Because range function doesn't include the end_range_value, we have to add an extra one(1)
         if isPrime(i):
             prime_number_list.append(i)
     return prime_number_list
@@ -106,7 +106,7 @@ print("Area of your triangle", round(area, 2))
 
 #Compound Interest
 def comp_interest(primary, interest_rate, year):
-    total_amount = primary * ((1 + (interest_rate/100)) ** year)
+    total_amount = primary * ((1 + (interest_rate/100)) ** year)    #Just using formula
     return total_amount
 
 primary = int(input("How much did you take?\n"))
