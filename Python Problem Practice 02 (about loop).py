@@ -1,3 +1,16 @@
+#Inserting element in the list - extra
+item =[1,3,4,5,6]
+print(item)
+item.insert(1, 2)   #To insert use --- list_name.insert(index_number, value) -- it will not delete any element, it will just slid in that element in that index
+print(item)
+
+
+
+
+
+
+
+
 #Remove duplicate chars from the string
 def remove_char(index1, string1):
     res = ''
@@ -119,3 +132,4 @@ print(sum_of_nums)
 # Reverse Index: when you -1 as index it will point to the last element of the list, same way -2 will point to the second last element of the list
 # Using listName.sort(reverse = True) will sort the list in descending order
 # 'not in' KW is just the opposite of 'in' KW
+# To insert any element in the list use --- list_name.insert(index_number, value) -- It will just slide in that index number, pushing the rest elements backward
