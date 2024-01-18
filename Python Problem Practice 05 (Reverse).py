@@ -2,7 +2,7 @@
 def white_space_rev(str):
     white_space = []
     index = len(str) - 1
-    for i in str[::-1]:     #Google str[::-1] to know how it works
+    for i in str[::-1]:     #Google str[::-1] to know how it works, basically in list/string slicing -- string_name[start_index : end_index : stepsize] ,, so when we passed the negative one (-1) in step size, the list/string is reversed
         if(i == ' '):
             white_space.append(index)
         index -= 1
@@ -26,7 +26,7 @@ def rev_words(str):
     return rev_str
 
 
-str1 = "Are you okay Tabassum?"
+str1 = "Are you okay?"
 print(rev_words(str1))
 # -------------------Another important approach------
 def rev_wordss(str2):
@@ -47,13 +47,13 @@ rev_wordss(str2)
 
 #Reverse Domain
 sites = "www.programming-hub.com"
-parts = sites.split('.')
+parts = sites.split('.')    #Returns a split list
 parts.reverse()
-parts = '.'.join(parts)
+parts = '.'.join(parts)     # -- ''.join(list_name) -- is a string class method, which adds every element of list, and adds the string on which it was called upon (here it is -- dot(.)) , between all the elements
 print(parts)
 #----------ANother approach--------
 site = "www.programming-hub.com"
-rev = '.'.join(reversed(site.split('.')))
+rev = '.'.join(reversed(site.split('.')))       # list_name.reverse() -- and -- reversed(list_name) does the same thing
 print(rev)
 
 
