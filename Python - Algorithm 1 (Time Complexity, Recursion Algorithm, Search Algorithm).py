@@ -21,13 +21,6 @@ print(factorial(5))
 
 
 
-
-
-
-
-
-
-
 #Pseudocode
 # It is a step by step process to solve a problem. Pseudocode is an easier way to think about the code.
 
@@ -51,6 +44,8 @@ print(factorial(5))
 #Recursion Algorithm
 # It has two conditions: A stopping condition or base condition --- and --- call the function itself.
 # Recursive algorithm calls itself from inside
+
+
 
 
 #Time Complexity
