@@ -54,15 +54,14 @@ import sys
 THis time while running the program from the command line, run -- py file_name.py input1 input2 --- 
 no more prompt for user input.
 the input that has been provided while running the program (input1, input2) 
-will be in the varable -- sys.argv -- as a form of list i.e. sys.argv = [name_of_the_file, input1, input2, ....]
-
+will be in the varable -- sys.argv -- as a form of a list i.e. sys.argv = [name_of_the_file, input1, input2, ....]
 '''
-print("hello, my name is", sys.argv[1]) # run -- py file_name.py your_name -- 
+print("hello, my name is", sys.argv[1]) # run -- py file_name.py your_name -- as the first element of -- sys.argv -- is the name of the file, so we print the second element i.e index number 1
 
 
 #If the user don't provide name while running the code, to avoid error - 
 try:
-    print("hello, my name is", sys.argv[1])
+    print("hello, my name is", sys.argv[1])             #Handling exception
 except IndexError:
     print("Too few arguments")
 
@@ -97,6 +96,11 @@ Importing a package (third-party module) cowsay, after installing -- pip install
 import cowsay
 import sys
 
-if len(sys.argv) == 2:  # run -- py file_name your_name
+if len(sys.argv) == 2:  # run in the command line-- py file_name your_name --
     cowsay.cow("hello, " + sys.argv[1])
     cowsay.trex("hello, " + sys.argv[1])
+
+
+
+
+
