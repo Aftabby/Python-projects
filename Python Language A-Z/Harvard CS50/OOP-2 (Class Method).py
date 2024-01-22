@@ -3,7 +3,7 @@ import random
 class Hat:
 
     #Class variable
-    housesss = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]   # It is a class variable ( or property) and is shared by all the object created from this class
+    housesss = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]   # It is a class attribute/variable ( or property) and is shared by all the object created from this class
 
 
     #Instance Method
