@@ -1,8 +1,8 @@
 class Student:
     def __init__(self, namee, housee): #instance method, the __init__ initializes or only called when the object is creating
-        if not name:
+        if not namee:
             raise ValueError("Name Missing.")   #--raise -- is just another kind of KW to raise an error, so that you can later try & except handle it.
-        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+        if housee not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("Invalid house")       #Here -- Invalid house -- is just a message that you pass with the exception error
 
         self.name = namee    #Here -- self -- is the object that just created
