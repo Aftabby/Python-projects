@@ -17,19 +17,19 @@ Module Operator   --   (%)   ---  __mod__(self, other)
 '''
 
 
-#An example of using Addition Operator Overloading
+#An example of using subtraction Operator Overloading
 class Complex:
     def __init__(self, real, img):
         self.real = real
         self.img = img
     
-    def __add__(self, other):                   #Special method to overload the addition operator
+    def __sub__(self, other):                   #Special method to overload the addition operator
         
-        #The new task of addition operator
-        real = self.real + other.real         
-        img = self.img + other.img
+        #The new task of subtraction operator
+        real = self.real - other.real         
+        img = self.img - other.img
 
-        return Complex(real, img)   #returning a class with the added value of two class
+        return Complex(real, img)   #returning a class with the subtracted value of two class
     
     
     def __str__(self) -> str:
@@ -38,6 +38,4 @@ class Complex:
 c1 = Complex(5, 10)
 c2 = Complex(15, 20)
 
-
-
-print("Addition is", c1+c2)             #To print this object from Complex class, we gotta add a special method in the Complex class block.
+print("Subtraction is: c2 - c1 =", c2-c1)             #To perform arithmatic operation on objects from Complex class, we gotta add a special method in the Complex class block.
