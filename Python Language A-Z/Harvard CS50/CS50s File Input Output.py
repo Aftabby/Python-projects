@@ -15,7 +15,7 @@ with open("names.txt", "r") as file:
 
 for _ in lines:
     print(_, end='')
-    #print(_.rstrip())  Does the same thing
+    #print(_.rstrip())  Does the same thing except it removes any trailing white space that is present in the string
 
 
 
@@ -49,7 +49,7 @@ with open("names.txt") as file:
 
 print("\n\n\n")
 
-with open("students.csv") as file:      # "r" is by default
+with open("students.csv") as file:      # access mode "r" is by default
     print(type(file))
     for line in file:
         row =line.rstrip().split(",")
