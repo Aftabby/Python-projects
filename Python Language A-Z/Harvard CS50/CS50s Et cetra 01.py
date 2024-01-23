@@ -1,3 +1,6 @@
+# ============================================= SET ===================================
+#Set - set is a data type that doesn't take any duplicate data
+
 students = [
     {"name" : "Hermoine", "house" : "Gryffindor"},
     {"name" : "Harry", "house" : "Gryffindor"},
@@ -9,7 +12,6 @@ students = [
 
 #house = list()     #You can create an empty  list like that
 
-#Set - set is a data type that doesn't take any duplicate data
 
 houses = set()   #That's how you create an empty set
 
@@ -243,7 +245,7 @@ print(*hello)   #It will unpack the list, and pass each element of the list as a
 
 
 
-#=============================== Functions with unlimited paramter / variable no. of parameter  ====================#
+#=============================== Functions with unlimited paramters / variable no. of parameters  ====================#
 
 # In function or method we define how many parameter (or argument) there should be
 # But there is a way by which we can define we want variable numbers of parameter into a function. example - print(a,b,c) - we can pass as many argument as we want in print
@@ -281,6 +283,10 @@ f(discount = 100)
 #Using both Positional Argument and Named Argument
 def f(*args, **kwargs):     #It is the conventional way to define the positional argument first, and then the named argument
     ...                 # ---   ...   --- dot dot dot is another of saying the keyword -- pass --
+
+
+
+
 
 
 
