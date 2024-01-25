@@ -118,7 +118,6 @@ conn.close()
 
 
 
-
 #Deleting the User
 conn = sqlite3.connect('just_a_database_name.db')
 cursor = conn.cursor()
