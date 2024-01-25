@@ -60,7 +60,7 @@ cursor = conn.cursor()
 
 #Creating Parents Table (You only need to run the below line once)
 
-#cursor.execute("CREATE TABLE Parents (FamilyId INTEGER PRIMARY KEY, Father TEXT, Mother TEXT)") #If you don't understand it, go and checkout the file 'Python - SQL - SQLite-3.py'
+#cursor.execute("CREATE TABLE Parents (FamilyId INTEGER PRIMARY KEY, Father TEXT, Mother TEXT)") #You know why we commented it out
 
 #Inseritng Values / Data / Rows of Parents Table
 
@@ -93,7 +93,7 @@ cursor.execute("SELECT Name, Mother FROM Children INNER JOIN Parents ON Children
 
 family = cursor.fetchall()
 
-print( sep='\n')
+print( family, sep='\n')
 
 
 #Saving the file in the database
