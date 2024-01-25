@@ -29,7 +29,7 @@ print(csv5)
 #Dropping the column based on any data that is NaN in the column, or -- all -- data in the column is NaN
 csv6 = csv1.dropna(how = "any", axis = 1)     # Though by default the value of the parameter --how -- is -- any -- , check csv3, it will drop the column which has any NaN value 
 print(csv6)                                         #If there is any row which entire value in NaN, then you will get an empty dataframe object
-csv7 = csv1.dropna(how = "all", axis = 1)     #It will only drop the column in which all the data is NaN(missing)
+csv7 = csv1.dropna(how = "all", axis = 1)     #It will only drop the column only and only if all the data is NaN(missing)
 print(csv7)
 
 
@@ -39,8 +39,8 @@ print(csv8)
 
 
 #Dropping row based on the condition, minimum number of NaN(Null value) values must be present in the row -- I'm not sure how it works
-csv9 = csv1.dropna(thresh = 2)              #Google it
-print(csv9)
+csv9 = csv1.dropna(thresh = 2)              #Google it  ,, The thresh parameter in the dropna() function in Pandas specifies the minimum number of non-NA values in a row or column for it to be considered in the final result. Any row or column with the number of non-NA values less than the thresh value is removed irrespective of other parameters passed.
+print(csv9)                                     #thresh parameter value decides the minimum number of non-NAN values needed in a "ROW" not to drop
 
 
 
