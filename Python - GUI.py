@@ -1,4 +1,4 @@
-from tkinter import *   #importing tkinter library
+from tkinter import *   #importing  all of the tkinter library
 
 root = Tk()         # tkinter library provides a -- Tk() -- toolkit, which is a thin object-oriented layer that helps to create GUI in python. Tk() initializes the class, and 'root' is the name given to the object 
 root.title("My First GUI")          # Giving title to your GUI window, IT is optional
