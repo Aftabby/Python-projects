@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-#Data Analysis on San Fransisco city salary dataset
+#Data Analysis on San Fransisco city salary dataset- YT: Data Thinkers
 #Data sheet link: https://www.kaggle.com/datasets/kaggle/sf-salaries
 
 
@@ -335,12 +335,79 @@ print(salary2)
 
 
 #Find Average BasePay of all employee per year
-salary3 = df1["BasePay"].mean()
+salary3 = df1["BasePay"].mean()     #Basepay mean of all year
 print(salary3)
 
 
 
-#salary4 = df1.groupby('Year').mean() ["BasePay"]
-#salary4 = df1.filter(items=['Year', "Basepay"]).groupby("Year").mean()         #No idea, why groupby methods are throwing an error
-print(salary4)
+
+salary4 = df1.groupby('Year')["BasePay"].mean()     #First we grouped the value based on the unique value of column "year" and secondly we selected only the basepay column of each group through indexing column_name,, lastly we applied the -- mean() -- method on the basepay column of each of the group(based on year value)
+print(salary4)                                      #It will return the average basepay of all the employee PER YEAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Find Average BasePay of All Employee per JobTitle
+column7 = df1.columns           #not method, an attribute
+print(column7)                  #Checking the column name first to understand in which column we have to perform the operation
+
+
+job6 = df1.groupby("JobTitle")["BasePay"].mean()            # You can apply -- .sort_values(ascending=False) -- if you want sort the values in descending order    #Same as the previous one
+print(job6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Find Average Basepay of employee having jobtitle ACCOUNTANT
+print(column7)
+
+ave1 = df1[df1["JobTitle"] == "ACCOUNTANT"]["BasePay"].mean()       #Already explained above
+print(ave1)
+
+
+
+
+
+
+
+
+
+
+#Find Top 5 Most Common Jobs
+job7 = df1["JobTitle"].value_counts()[0:5]              # Or you can -- head() -- method here
+print(job7)
+
+
+
+
+
+
+
+
+
+
 
