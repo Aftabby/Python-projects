@@ -1,3 +1,9 @@
+
+
+
+
+
+
 #Mini - Max Sum
 a = input() #Numbers will be give in a line with whitespaces
 b = (a.split())  #To split numbers(still as string) by whitespaces and taking output as a list
@@ -10,7 +16,6 @@ maxx = sum(b) - min(b)
 minn = sum(b) - max(b)
 
 print(f"{minn} {maxx}")
-
 
 
 
