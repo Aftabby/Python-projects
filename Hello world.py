@@ -45,7 +45,7 @@ doesExist0 = 53 in myFirstList
 #Adding two lists together, the new lists will be the combination of all the elements respectively
 addedList = myFirstList + mySecondList + myFirstList
 
-#Remove the of the list
+#Remove the item of the list by index number
 mySecondList.pop() #By default it will remove the last element of the list
 mySecondList.pop(2)  # To remove an element by index number, pass the index number as an argument of pop function
 
@@ -57,13 +57,11 @@ mySecondList.sort()
 myFirstList.reverse()
 mySecondList.reverse()
 
-#Finding out a range of Numbers - range(start, stop) - by default start is 0 
+#Finding out a range of Numbers - range(start, stop) - by default start is 0, and uptp stop (excluding stop)
 anotherTemp = range(8)
 anotherTemp1 = range( 9, 17)
 
-#TEst
-#print(justAVariable)
-#print(justAVariable3)
+
 
 #queries  and Important Notes
 #how to determine which string is greater than one another?
@@ -234,5 +232,5 @@ print(c)
 # Recursive Function calls itself
 # You can set a default value to a parameter ( def functionName (value = 5) this default value will be used if you do not pass any parameter through it)
 # Your don't have to worry about parameter order, if you pass it by their name while calling functions
-# All built in funtions of python: docs.python.org/3/livrary/functions.html
+# All built in funtions of python: docs.python.org/3/library/functions.html
 # Do not forget to use ANonymous function / Lambda function, where necessary
