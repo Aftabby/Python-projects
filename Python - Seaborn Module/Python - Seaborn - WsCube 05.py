@@ -16,13 +16,17 @@ arr1 = np.linspace(1, 10, 20).reshape(4, 5) #Creating an array with 20 elements 
 print(arr1)
 
 
-#Creating a Heatmap Plot
+
+
 sns.heatmap(arr1)       #Here The data will be shown according to the number and color of the right side bar, the shape will be same as the shape of array
 plt.show()                  #Heatmap with an 2D-Array
 
 
 sns.heatmap(data1.head(10))     #Heatmap with dataframe_object (first 10 values), each value will represen a color in the heatmap, and the relation of color and number will be given at the right side bar
 plt.show()
+
+
+
 
 
 
