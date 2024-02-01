@@ -40,7 +40,7 @@ plt.show()
 
 
 plt.hist(array1, bottom=20, color="g", edgecolor="y", align="left" )    #with named parameter -- align -- you can align the x-axis value with respect to their bar range
-plt.show()
+plt.show()                                                              #With named parameter --bottom -- you can set the minimum value of y-axis scale
 
 
 
@@ -91,5 +91,45 @@ plt.show()
 
 
 
+#Showing the label in the graph
 
-#Still remaining
+plt.legend()     #When you pass the label parameter in -- plt.hist() -- method, you gotta call the -- plt.legend() -- method,, you can also pass the label parameter in this method instead of -- plt.bar() -- method
+
+plt.show()
+
+
+
+
+
+
+#Showing a vertical line at any point of x-axis
+
+plt.hist(array1, edgecolor="g")
+
+plt.axvline(45, color="r", label="Median")      #A vertical line by -- plt.axvline(value_of_x_axis) --- ,, to activate the label paramter, you have to call the method -- plt.legend() --
+plt.legend()
+
+plt.show()
+
+
+
+
+
+
+
+
+
+#Showing grid on the graph
+plt.hist(array1, edgecolor="g")
+plt.grid()          # -- plt.grid() -- method activates the grid view of the graph
+
+plt.show()
+
+
+
+
+
+
+
+
+
