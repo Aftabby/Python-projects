@@ -10,13 +10,13 @@ print(data1, type(data1))           #panda dataframe object type
 print(data1.total_bill)
 
 
-'''
+
 #Creating a Violin plot
 sns.violinplot(x="day", y="total_bill", data=data1) #You can also pass only x or y parameter, to see single violin plot
 
 plt.show()
 
-'''
+
 
 
 
