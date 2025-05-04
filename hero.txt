@@ -1,3 +1,0 @@
-Everything is overwritten now 
- Hero was all gone.
- This line is appended in the file
